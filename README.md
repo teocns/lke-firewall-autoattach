@@ -28,4 +28,17 @@ The application can be run in a DaemonSet as seen in [this example](https://gith
 
 
 
+----
 
+#### Important notes
+
+To ensure reliability of you LKE cluster behind a firewall, ensure that you configure your rules accordingly:
+
+
+TCP port `10250` inbound from `192.168.128.0/17`, Kubelet health checks
+
+UDP port `51820` inbound from `192.168.128.0/17`, Wireguard tunneling for kubectl proxy
+
+TCP `179` inbound from `192.168.128.0/17`, Calico BGP traffic
+
+TCP/UDP port`30000 - 32767` inbound from `All`, NodePorts for workload Services
