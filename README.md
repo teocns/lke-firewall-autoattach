@@ -1,5 +1,5 @@
-A DaemonSet that attaches a Firewall to all Linodes of a Kubernetes cluster and labels the node as schedulable
-Useful to be able to expose services on _NodePort_
+A DaemonSet that attaches a Firewall to all Linodes of a Kubernetes cluster and labels the node as schedulable.
+Useful to be able to expose services on _NodePort_, such as by attaching a Firewall allowing inbound traffic to ports 30000-32767
 
 
 ####  Docker Hub Image
